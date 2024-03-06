@@ -8,3 +8,22 @@ body {
   text-align: center;
   margin-top: 100px;
 }
+
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card {
+  text-align: left;
+}
+
+#form-container {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
