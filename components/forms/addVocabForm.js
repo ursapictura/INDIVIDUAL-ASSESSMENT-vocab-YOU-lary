@@ -2,7 +2,7 @@ import selectLanguage from './selectLanguage';
 import renderToDom from '../../utils/renderToDom';
 import clearDom from '../../utils/clearDom';
 
-const addVocabForm = (uid, obj = {}) => {
+const addVocabForm = (obj = {}) => {
   clearDom();
   const domString = `
     <form id="${obj.firebaseKey ? `update-vocab--${obj.firebaseKey}` : 'submit-vocab'}" class="mb-4">

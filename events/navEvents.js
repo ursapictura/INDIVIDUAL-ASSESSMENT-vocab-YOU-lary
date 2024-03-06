@@ -6,7 +6,9 @@ import { showVocab } from '../pages/vocab';
 const navEvents = (uid) => {
   document.querySelector('#logout-button').addEventListener('click', signOut);
 
-  document.querySelector('#add-vocab').addEventListener('click', addVocabForm);
+  document.querySelector('#add-vocab').addEventListener('click', () => {
+    addVocabForm(uid);
+  });
 
   document.querySelector('#logo').addEventListener('click', () => {
     getVocab(uid).then(showVocab);

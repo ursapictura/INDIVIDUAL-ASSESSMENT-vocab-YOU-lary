@@ -25,7 +25,7 @@ const showVocab = (array) => {
         <h6 class="card-language mb-2 text-body-secondary">${item.language_id}</h6>
         <p class="card-text">${item.definition}</p>
         <a href="#" class="card-link" id="edit-vocab-btn--${item.firebaseKey}">edit</a>
-        <a href="#" class="card-link" id="edit-vocab-btn--${item.firebaseKey}">delete</a>
+        <a href="#" class="card-link" id="delete-vocab-btn--${item.firebaseKey}">delete</a>
       </div>
     </div>`;
   });

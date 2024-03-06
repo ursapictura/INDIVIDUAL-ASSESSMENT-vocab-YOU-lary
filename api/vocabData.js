@@ -4,7 +4,6 @@ const endpoint = client.databaseURL;
 
 const getVocab = (uid) => new Promise((resolve, reject) => {
   console.warn('Got Vocab!');
-  console.warn(uid);
   fetch(`${endpoint}/vocab.json?orderBy="uid"&equalTo="${uid}"`, {
     method: 'GET',
     headers: {

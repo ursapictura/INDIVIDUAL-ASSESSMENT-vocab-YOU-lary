@@ -2,9 +2,9 @@ import getLanguages from '../../api/languageData';
 import renderToDom from '../../utils/renderToDom';
 
 const selectLanguage = (languageId) => {
-  let domString = `<label for="author">Select an Author</label>
-    <select class="form-control" id="author_id" required>
-    <option value="">Select an Author</option>`;
+  let domString = `<label for="language">Select an Language</label>
+    <select class="form-control" id="language_id" required>
+    <option value="">Select a Language</option>`;
 
   getLanguages().then((languageArray) => {
     languageArray.forEach((language) => {
