@@ -1,6 +1,7 @@
 import renderToDom from '../utils/renderToDom';
 import clearDom from '../utils/clearDom';
 import { getLanguages } from '../api/languageData';
+// import languageButtons from '../components/shared/languageButtons';
 
 const addVocabBtn = () => {
   const btnString = '<button class="btn btn-success btn-lg mb-4" id="add-vocab-btn">Add A Vocabulary Term!</button>';
@@ -11,10 +12,11 @@ const emptyVocab = () => {
   clearDom();
   addVocabBtn();
   const domString = '<h1>No Vocabulary Terms</h1>';
-  renderToDom('#store', domString);
+  renderToDom('#cards', domString);
 };
 
 const showVocab = async (uid, array) => {
+  console.warn(array);
   clearDom();
 
   let domString = '';
