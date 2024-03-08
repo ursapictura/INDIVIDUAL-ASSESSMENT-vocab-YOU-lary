@@ -7,13 +7,13 @@ const domEvents = (uid) => {
     if (e.target.id.includes('edit-vocab-btn')) {
       const [, firebaseKey] = e.target.id.split('--');
 
-      getSingleVocab(firebaseKey).then((vocabObj) => addVocabForm(vocabObj));
+      getSingleVocab(firebaseKey).then((vocabObj) => addVocabForm(vocabObj, uid));
     }
 
     if (e.target.id.includes('delete-vocab-btn')) {
       const [, firebaseKey] = e.target.id.split('--');
 
-      deleteVocab(firebaseKey).then(() => getVocab(uid).then(showVocab));
+      deleteVocab(firebaseKey).then(() => getVocab(uid).then((array) => showVocab(uid, array)));
     }
   });
 };
