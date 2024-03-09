@@ -14,6 +14,32 @@ const getLanguages = () => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const createLanguage = (payload) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/languages.json`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(payload),
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
+});
+
+const updateLanguage = (payload) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/languages/${payload.firebaseKey}.json`, {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(payload),
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
+});
+
 const getSingleLanguage = (firebaseKey) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/languages/${firebaseKey}.json`, {
     method: 'GET',
@@ -38,4 +64,9 @@ const getLanguageVocab = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-export { getLanguages, getSingleLanguage, getLanguageVocab };
+export {
+  getLanguages,
+  createLanguage,
+  updateLanguage,
+  getSingleLanguage, getLanguageVocab
+};
