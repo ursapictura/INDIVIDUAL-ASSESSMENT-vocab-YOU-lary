@@ -1,13 +1,22 @@
 import renderToDom from '../../utils/renderToDom';
 
+const emptyLanguages = () => {
+  const domString = 'no languages added';
+  renderToDom('#language-buttons', domString);
+};
+
 const languageButtons = (array) => {
   console.warn(array);
   let domString = '';
 
-  array.forEach((language) => {
-    domString += `<button id="filter-language--${language.firebaseKey}" class="btn btn-secondary">${language.title}</button>`;
-  });
-  renderToDom('#language-buttons', domString);
+  if (array.length === 0) {
+    emptyLanguages();
+  } else {
+    array.forEach((language) => {
+      domString += `<button id="filter-language--${language.firebaseKey}" class="btn btn-secondary">${language.title}</button>`;
+    });
+    renderToDom('#language-buttons', domString);
+  }
 };
 
-export default languageButtons;
+export { languageButtons, emptyLanguages };

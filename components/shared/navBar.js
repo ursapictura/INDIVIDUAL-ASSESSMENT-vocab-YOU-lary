@@ -13,6 +13,9 @@ const navBar = () => {
             <li class="nav-item">
               <a class="nav-link" href="#" id="add-vocab">Add a Vocabulary Term</a>
             </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#" id="add-language">Add a Language</a>
+          </li>
             <li>
             <input
               class="form-control mr-sm-2"
