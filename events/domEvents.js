@@ -1,3 +1,4 @@
+import { getLanguageVocab } from '../api/languageData';
 import { deleteVocab, getSingleVocab, getVocab } from '../api/vocabData';
 import addVocabForm from '../components/forms/addVocabForm';
 import { showVocab } from '../pages/vocab';
@@ -14,6 +15,12 @@ const domEvents = (uid) => {
       const [, firebaseKey] = e.target.id.split('--');
 
       deleteVocab(firebaseKey).then(() => getVocab(uid).then((array) => showVocab(uid, array)));
+    }
+
+    if (e.target.id.includes('filter-language')) {
+      const [, firebaseKey] = e.target.id.split('--');
+
+      getLanguageVocab(firebaseKey).then((array) => showVocab(uid, array));
     }
   });
 };
