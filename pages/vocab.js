@@ -1,7 +1,7 @@
 import renderToDom from '../utils/renderToDom';
 import clearDom from '../utils/clearDom';
 import { getLanguages } from '../api/languageData';
-// import languageButtons from '../components/shared/languageButtons';
+import languageButtons from '../components/shared/languageButtons';
 
 const addVocabBtn = () => {
   const btnString = '<button class="btn btn-success btn-lg mb-4" id="add-vocab-btn">Add A Vocabulary Term!</button>';
@@ -18,6 +18,7 @@ const emptyVocab = () => {
 const showVocab = async (uid, array) => {
   console.warn(array);
   clearDom();
+  getLanguages().then((languageArray) => languageButtons(languageArray));
 
   let domString = '';
   const languages = await getLanguages(uid);

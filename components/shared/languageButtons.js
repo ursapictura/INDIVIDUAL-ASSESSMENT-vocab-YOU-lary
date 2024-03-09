@@ -7,7 +7,7 @@ const languageButtons = (array) => {
   array.forEach((language) => {
     domString += `<button id="filter-language--${language.firebaseKey}" class="btn btn-secondary">${language.title}</button>`;
   });
-  renderToDom('#language-button', domString);
+  renderToDom('#language-buttons', domString);
 };
 
 export default languageButtons;
