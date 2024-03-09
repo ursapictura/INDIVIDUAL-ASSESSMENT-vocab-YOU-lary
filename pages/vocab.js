@@ -3,14 +3,8 @@ import clearDom from '../utils/clearDom';
 import { getLanguages } from '../api/languageData';
 import { languageButtons } from '../components/shared/languageButtons';
 
-const addVocabBtn = () => {
-  const btnString = '<button class="btn btn-success btn-lg mb-4" id="add-vocab-btn">Add A Vocabulary Term!</button>';
-  renderToDom('#add-button', btnString);
-};
-
 const emptyVocab = () => {
   clearDom();
-  addVocabBtn();
   const domString = '<h1>No Vocabulary Terms</h1>';
   renderToDom('#cards', domString);
 };
@@ -18,7 +12,7 @@ const emptyVocab = () => {
 const showVocab = async (uid, array) => {
   console.warn(array);
   clearDom();
-  getLanguages().then((languageArray) => languageButtons(languageArray));
+  getLanguages(uid).then((languageArray) => languageButtons(languageArray));
 
   let domString = '';
   const languages = await getLanguages(uid);
@@ -44,4 +38,4 @@ const showVocab = async (uid, array) => {
   }
 };
 
-export { addVocabBtn, emptyVocab, showVocab };
+export { emptyVocab, showVocab };
