@@ -26,4 +26,16 @@ const getSingleLanguage = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-export { getLanguages, getSingleLanguage };
+const getLanguageVocab = (firebaseKey) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocab.json?orderBy="language_id"&equalTo="${firebaseKey}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(Object.values(data)))
+    .catch(reject);
+});
+
+export { getLanguages, getSingleLanguage, getLanguageVocab };
