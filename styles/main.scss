@@ -3,10 +3,22 @@
 
 
 body {
-  background-color: antiquewhite;
+  background-color: rgb(236, 238, 236);
   color: brown;
   text-align: center;
   margin-top: 100px;
+}
+#language-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.btn-outline-success {
+  margin: 10px 5px;
 }
 
 #cards {
@@ -18,12 +30,28 @@ body {
   margin-right: auto;
 }
 
+
 .card {
+  background: rgba(232, 238, 232, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(45, 82, 54, 0.37);
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  color: rgb(30, 116, 33);
   text-align: left;
+}
+
+.card-link {
+  color: rgb(37, 96, 40);
 }
 
 #form-container {
   width: 60%;
   margin-left: auto;
   margin-right: auto;
+}
+
+form {
+  color: rgb(30, 116, 33);
 }

@@ -16,7 +16,7 @@ const addVocabForm = (obj = {}, uid) => {
       </div>
       <div class="form-group" id="select-language">
       </div>
-      <button type="submit" class="btn btn-primary">Submit Vocabulary Term
+      <button type="submit" class="btn btn-outline-success">Submit Vocabulary Term
       </button>
     </form>`;
 

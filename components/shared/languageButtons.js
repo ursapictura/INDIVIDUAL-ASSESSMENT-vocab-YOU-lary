@@ -13,7 +13,7 @@ const languageButtons = (array) => {
     emptyLanguages();
   } else {
     array.forEach((language) => {
-      domString += `<button id="filter-language--${language.firebaseKey}" class="btn btn-secondary">${language.title}</button>`;
+      domString += `<button id="filter-language--${language.firebaseKey}" class="btn btn-outline-success">${language.title}</button>`;
     });
     renderToDom('#language-buttons', domString);
   }

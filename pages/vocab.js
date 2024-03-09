@@ -30,7 +30,7 @@ const showVocab = async (uid, array) => {
       const singleLanguage = languages.find((lang) => lang.firebaseKey === item.language_id);
 
       domString += `
-      <div class="card" style="width: 30%;">
+      <div class="card vocab-card" style="width: 30%;">
         <div class="card-body">
           <h5 class="card-title">${item.title}</h5>
           <h6 class="card-language mb-2 text-body-secondary">${singleLanguage.title}</h6>
