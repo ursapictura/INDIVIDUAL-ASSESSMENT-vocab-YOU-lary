@@ -1,11 +1,12 @@
-import { getSingleVocab } from './vocabData';
-import { getSingleLanguage } from './languageData';
+import { getVocab } from './vocabData';
 
-const getVocabLanguage = async (firebaseKey) => { // the async keyword let's JS know this is asynchronous function (promise)
-  const vocabObject = await getSingleVocab(firebaseKey); // await stops the code in this function and waits for the response. This is like using .then
-  const languageObject = await getSingleLanguage(vocabObject.language_id); // this function uses the data response from the bookObject
+const searchVocab = async (uid, searchValue) => {
+  const allVocab = await getVocab(uid);
+  const filteredVocab = await allVocab.filter((vocab) => (
+    vocab.title.toLowerCase().includes(searchValue.toLowerCase())
+    || vocab.definition.toLowerCase().includes(searchValue.toLowerCase())));
 
-  return languageObject.title;
+  return filteredVocab;
 };
 
-export default getVocabLanguage;
+export default searchVocab;
