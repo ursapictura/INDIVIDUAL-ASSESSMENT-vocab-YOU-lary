@@ -1,16 +1,17 @@
-<img alt="screneshot of welcome page" src="image/screenshot1-welcome.png"/>
+<img alt="screenshot of main page" width="1656" src="https://github.com/ursapictura/INDIVIDUAL-ASSESSMENT-vocab-YOU-lary/assets/104770521/eb68037e-adbc-43e7-8241-947180e8e4aa">
 
 
 
 
 
-# Hogwarts Sorting Hat
+
+# Words to Remember
 
 [Deployed App](https://vocab-recall.netlify.app/)
 
 [Project Board](https://github.com/users/ursapictura/projects/2)
 
-[Video Demo]()
+[Video Demo](https://www.loom.com/share/f3581f90cf7c45f48ae1c1616adb89d3?sid=c531e396-1159-4ad3-a06f-2722c5e318e3)
 
 
 
@@ -36,8 +37,7 @@ Learning a new language is difficult, but this application is here to help! Lang
 
 ## Screenshots
 
-<img alt="scrennshot of new student form" src="image/screenshot2-form.png"/>
+<img alt="scrennshot of language filter buttons" width="1675" src="https://github.com/ursapictura/INDIVIDUAL-ASSESSMENT-vocab-YOU-lary/assets/104770521/1f507e1f-eae6-4396-b763-ad2763870320">
 
-<img alt="scrennshot of student cards" src="image/screenshot3-students.png"/>
+<img alt="screenshot of student cards" width="1673" src="https://github.com/ursapictura/INDIVIDUAL-ASSESSMENT-vocab-YOU-lary/assets/104770521/15d678c5-a352-48c2-841c-353f144136a2">
 
-<img alt="scrennshot of expelled student cards" src="image/screenshot4-expelled.png"/>
