@@ -23,7 +23,7 @@ const formEvents = (uid) => {
         const patchPayload = { firebaseKey: name };
 
         updateVocab(patchPayload).then(() => {
-          getVocab(uid).then((array) => showVocab(uid, array));
+          getVocab(uid).then((array) => showVocab(array));
         });
       });
     }
@@ -40,7 +40,7 @@ const formEvents = (uid) => {
       };
 
       updateVocab(payload).then(() => {
-        getVocab(uid).then((array) => showVocab(uid, array));
+        getVocab(uid).then((array) => showVocab(array));
       });
     }
 
@@ -57,7 +57,7 @@ const formEvents = (uid) => {
         const patchPayload = { firebaseKey: name };
 
         updateLanguage(patchPayload).then(() => {
-          getVocab(uid).then((array) => showVocab(uid, array));
+          getVocab(uid).then((array) => showVocab(array));
         });
       });
     }
@@ -71,7 +71,7 @@ const formEvents = (uid) => {
       };
 
       updateLanguage(payload).then(() => {
-        getVocab(uid).then((array) => showVocab(uid, array));
+        getVocab(uid).then((array) => showVocab(array));
       });
     }
   });

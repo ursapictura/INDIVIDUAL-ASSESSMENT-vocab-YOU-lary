@@ -9,13 +9,13 @@ const emptyVocab = () => {
   renderToDom('#cards', domString);
 };
 
-const showVocab = async (uid, array) => {
+const showVocab = async (array) => {
   console.warn(array);
   clearDom();
-  getLanguages(uid).then((languageArray) => languageButtons(languageArray));
+  getLanguages().then((languageArray) => languageButtons(languageArray));
 
   let domString = '';
-  const languages = await getLanguages(uid);
+  const languages = await getLanguages();
 
   if (array.length === 0) {
     emptyVocab();
