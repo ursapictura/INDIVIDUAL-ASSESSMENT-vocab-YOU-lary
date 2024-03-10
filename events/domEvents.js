@@ -14,13 +14,13 @@ const domEvents = (uid) => {
     if (e.target.id.includes('delete-vocab-btn')) {
       const [, firebaseKey] = e.target.id.split('--');
 
-      deleteVocab(firebaseKey).then(() => getVocab(uid).then((array) => showVocab(uid, array)));
+      deleteVocab(firebaseKey).then(() => getVocab(uid).then((array) => showVocab(array)));
     }
 
     if (e.target.id.includes('filter-language')) {
       const [, firebaseKey] = e.target.id.split('--');
 
-      getLanguageVocab(firebaseKey).then((array) => showVocab(uid, array));
+      getLanguageVocab(firebaseKey).then((array) => showVocab(array));
     }
   });
 };

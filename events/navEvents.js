@@ -16,7 +16,7 @@ const navEvents = (uid) => {
   });
 
   document.querySelector('#logo').addEventListener('click', () => {
-    getVocab(uid).then((vocab) => showVocab(uid, vocab));
+    getVocab(uid).then((vocab) => showVocab(vocab));
   });
 };
 
